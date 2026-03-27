@@ -8,6 +8,13 @@ public class PuzzleManager : MonoBehaviour
 
     void Start()
     {
+        // Asegurar que todas las tiles tengan referencia al manager
+        foreach (Tile tile in tiles)
+        {
+            tile.manager = this;
+            tile.ActualizarPosicion();
+        }
+
         Mezclar();
     }
 
@@ -31,6 +38,9 @@ public class PuzzleManager : MonoBehaviour
         for (int i = 0; i < 50; i++)
         {
             List<Tile> vecinos = ObtenerVecinos();
+
+            if (vecinos.Count == 0) continue;
+
             Tile random = vecinos[Random.Range(0, vecinos.Count)];
             IntentarMover(random);
         }
