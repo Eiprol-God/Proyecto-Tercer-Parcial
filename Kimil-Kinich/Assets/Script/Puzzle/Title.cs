@@ -7,8 +7,8 @@ public class Tile : MonoBehaviour
 
     private RectTransform rt;
 
-    public float tileSize = 100f;
-    public int gridSize = 4;
+    public float tileSize = 200f;
+    public int gridSize = 8;
 
     void Awake()
     {
@@ -29,7 +29,7 @@ public class Tile : MonoBehaviour
 
     public void ActualizarPosicion()
     {
-        float offset = (gridSize - 1) / 2f * tileSize;
+        float offset = (gridSize - 2) / 4f * tileSize;
 
         rt.anchoredPosition = new Vector2(
             (posicion.x * tileSize) - offset,
