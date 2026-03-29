@@ -185,7 +185,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ab68bd7007108ec4cbce78050526ad48, type: 2}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -227,7 +227,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1312,12 +1312,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327491640}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.14203204, y: -0.69645786, z: 0.14364913, w: -0.68857706}
-  m_LocalPosition: {x: -3.1957433, y: 1.8054152, z: 0.09327984}
+  m_LocalRotation: {x: -0.25398013, y: 0.010733056, z: -0.0028189113, w: -0.9671458}
+  m_LocalPosition: {x: 0.033196688, y: 4.1703, z: -7.3936567}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 515307959}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &327491644
 MonoBehaviour:
@@ -2279,11 +2279,10 @@ Transform:
   m_GameObject: {fileID: 515307955}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.93, y: 1, z: -4.452}
+  m_LocalPosition: {x: -3.562, y: 1, z: -4.452}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 327491643}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &515307960
@@ -2420,7 +2419,7 @@ Transform:
   m_GameObject: {fileID: 543915271}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.12, y: 0.5, z: -4.71}
+  m_LocalPosition: {x: 3.69, y: 0.5, z: 3.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7863,7 +7862,7 @@ Transform:
   m_GameObject: {fileID: 1878943550}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.93, y: 0.76, z: -7.53}
+  m_LocalPosition: {x: -3.56, y: 2.29, z: -4.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8268,6 +8267,7 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 327491643}
   - {fileID: 659025912}
   - {fileID: 462687654}
   - {fileID: 1473078175}
