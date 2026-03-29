@@ -5,8 +5,11 @@ public class PuzzleManager : MonoBehaviour
 {
     public List<Tile> tiles = new List<Tile>();
     public Vector2Int posicionVacia;
+
     public AudioSource audioSource;
     public AudioClip sonidoMover;
+
+    public GameObject SlidePuzzle;
 
     void Start()
     {
@@ -14,7 +17,7 @@ public class PuzzleManager : MonoBehaviour
         {
             tile.manager = this;
             tile.posicionInicial = tile.posicion;
-            tile.ActualizarPosicion();
+            tile.SetPosicionInstantanea();
         }
 
         Mezclar();
@@ -33,9 +36,13 @@ public class PuzzleManager : MonoBehaviour
 
             tile.ActualizarPosicion();
 
+            if (audioSource != null && sonidoMover != null)
+                audioSource.PlayOneShot(sonidoMover);
+
             if (EstaResuelto())
             {
                 Debug.Log("GANASTE 😎");
+                SlidePuzzle.SetActive(false);
             }
         }
     }
@@ -49,7 +56,16 @@ public class PuzzleManager : MonoBehaviour
             if (vecinos.Count == 0) continue;
 
             Tile random = vecinos[Random.Range(0, vecinos.Count)];
-            IntentarMover(random);
+
+            // Movimiento SIN animación
+            Vector2Int temp = random.posicion;
+            random.posicion = posicionVacia;
+            posicionVacia = temp;
+        }
+
+        foreach (Tile tile in tiles)
+        {
+            tile.SetPosicionInstantanea();
         }
     }
 
@@ -58,8 +74,7 @@ public class PuzzleManager : MonoBehaviour
         foreach (Tile tile in tiles)
         {
             if (tile.posicion != tile.posicionInicial)
-
-            return false;
+                return false;
         }
 
         return true;
@@ -86,10 +101,10 @@ public class PuzzleManager : MonoBehaviour
         foreach (Tile tile in tiles)
         {
             tile.posicion = tile.posicionInicial;
-            tile.ActualizarPosicion();
         }
 
         posicionVacia = new Vector2Int(3, 3);
+
         Mezclar();
     }
 }
