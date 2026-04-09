@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 445260856}
   - component: {fileID: 445260855}
   - component: {fileID: 445260854}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy_01
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 0.5
-  Enemybullet: {fileID: 7669739068615027066, guid: 2d4a1888fcad3db45bd050fbc563cc68, type: 3}
+  Enemybullet: {fileID: 1059923091707726635, guid: 43caae0abf1097549b823a6df211df05, type: 3}
   sightRange: 2
   attackRange: 3
   playerInSightRange: 0
