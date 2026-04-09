@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = (camForward * v + camRight * h).normalized;
 
         // ----------- DETECCIÓN DE SUELO ----------
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.1f);
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer);
 
         // ----------- INPUT DE SALTO ----------
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         // ----------- MOVIMIENTO ----------
-        if (moveDirection.magnitude > 0.1f)
+        if (moveDirection.magnitude > 0.2f)
         {
             Vector3 move = moveDirection * speed * Time.fixedDeltaTime;
             rb.MovePosition(rb.position + move);
@@ -69,6 +69,9 @@ public class PlayerMovement : MonoBehaviour
         // ----------- SALTO ----------
         if (jumpRequest)
         {
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
+            
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
             jumpRequest = false;
         }
