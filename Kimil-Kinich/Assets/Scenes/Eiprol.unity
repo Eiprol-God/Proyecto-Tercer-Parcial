@@ -6782,6 +6782,10 @@ PrefabInstance:
       value: MNGRueda
       objectReference: {fileID: 0}
     - target: {fileID: 9110747753219581832, guid: 479771519ad960a46a04839e6b0e99c7, type: 3}
+      propertyPath: ruedas.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9110747753219581832, guid: 479771519ad960a46a04839e6b0e99c7, type: 3}
       propertyPath: 'ruedas.Array.data[0]'
       value: 
       objectReference: {fileID: 312920609}
