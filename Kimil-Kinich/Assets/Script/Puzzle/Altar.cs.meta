@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: 62b51894b9738064bbf7eda2cdf70244
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - objetoFoto: {fileID: 5431611693046360351, guid: f608f302d7f520742b27055313cb56ae, type: 3}
+  - objetoFlores: {fileID: 1930282961334348776, guid: 6f84584133d8a15438ca908e74d59d82, type: 3}
+  - puerta: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

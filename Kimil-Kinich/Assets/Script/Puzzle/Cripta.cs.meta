@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: 4c4e6e0ab441f1b458b2718da0261a63
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - manager: {instanceID: 0}
+  - sonidoPiedra: {fileID: 8300000, guid: 25d41b7c390ab594dad38c7b9bb2c26b, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
