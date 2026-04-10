@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PickUpPiece : MonoBehaviour
+public class FlowerPickup : MonoBehaviour
 {
     public AudioClip sonidoRecoger;
 
@@ -10,7 +10,7 @@ public class PickUpPiece : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(sonidoRecoger, transform.position);
 
-            PhotoManager.instancia.RecogerPieza();
+            FlowerManager.instancia.RecogerPieza();
 
             Destroy(gameObject);
         }
