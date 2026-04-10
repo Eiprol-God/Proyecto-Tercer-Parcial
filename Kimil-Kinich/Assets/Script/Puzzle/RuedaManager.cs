@@ -5,6 +5,8 @@ public class CandadoManager : MonoBehaviour
 {
     public List<RuedaCandado> ruedas;
 
+    public GameObject MNGRueda;
+
     public void VerificarCodigo()
     {
         foreach (var rueda in ruedas)
@@ -17,5 +19,7 @@ public class CandadoManager : MonoBehaviour
         }
 
         Debug.Log("Candado abierto 🔓");
+        MNGRueda.SetActive(false);
+        AudioManager.instancia.ReproducirPuzzleResuelto();
     }
 }

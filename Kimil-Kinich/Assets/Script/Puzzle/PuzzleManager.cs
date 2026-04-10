@@ -43,6 +43,7 @@ public class PuzzleManager : MonoBehaviour
             {
                 Debug.Log("GANASTE 😎");
                 SlidePuzzle.SetActive(false);
+                AudioManager.instancia.ReproducirPuzzleResuelto();
             }
         }
     }
