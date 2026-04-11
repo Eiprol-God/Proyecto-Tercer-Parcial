@@ -17,6 +17,15 @@ public class GameTimer : MonoBehaviour
 
         timeRemaining -= Time.deltaTime;
 
+        if (timeRemaining <= 10)
+		{
+    		timerText.color = Color.red;
+		}
+		else
+		{
+    		timerText.color = Color.white;
+		}
+
         if (timeRemaining <= 0)
         {
             timeRemaining = 0;

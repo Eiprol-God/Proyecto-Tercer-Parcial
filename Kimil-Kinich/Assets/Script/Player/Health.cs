@@ -11,16 +11,21 @@ public class PlayerHealth : MonoBehaviour
     public float invulnerabilityTime = 1f;
     private bool isInvulnerable = false;
 
+    public HeartsUI heartsUI;
+
     void Start()
-    {
-        currentHealth = maxHealth;
-    }
+	{
+    	currentHealth = maxHealth;
+    	heartsUI.UpdateHearts(currentHealth);
+	}
 
     public void TakeDamage(int damage)
     {
         if (isInvulnerable) return;
 
         currentHealth -= damage;
+
+		heartsUI.UpdateHearts(currentHealth);
 
         Debug.Log("Vida actual: " + currentHealth);
 
