@@ -5,20 +5,28 @@ using UnityEngine.AI;
 public class HoleTrigger : MonoBehaviour
 {
 	public EnemySpawner spawner;
-	
+
     [Header("Sonido")]
     public AudioSource fallSound;
 
     [Header("Tiempo antes de destruir")]
     public float destroyDelay = 2f;
 
+    private bool alreadyTriggered = false;
+
     void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-            StartCoroutine(FallAndDestroy(other.gameObject));
-        }
-    }
+	{
+    	if (other.CompareTag("Enemy"))
+    	{
+        	EnemyController enemyScript = other.GetComponent<EnemyController>();
+
+        	if (enemyScript != null && !enemyScript.isDead)
+        	{
+            	enemyScript.isDead = true;
+            	StartCoroutine(FallAndDestroy(other.gameObject));
+        	}
+    	}
+	}
 
     IEnumerator FallAndDestroy(GameObject enemy)
     {
@@ -39,6 +47,14 @@ public class HoleTrigger : MonoBehaviour
 
         yield return new WaitForSeconds(destroyDelay);
 
-        Destroy(enemy);
+		if (spawner != null)
+		{
+    		Debug.Log("Enemy murió");
+    		spawner.EnemyDied();
+		}
+
+		Destroy(enemy);
+		alreadyTriggered = false;
+		// listo para el siguiente enemigo
     }
 }

@@ -15,26 +15,35 @@ public class EnemyController : MonoBehaviour
     public float damageCooldown = 1.5f;
     private float lastDamageTime;
 
+    [HideInInspector]
+	public bool isDead = false;
+
     void Start()
-    {
-        agent = GetComponent<NavMeshAgent>();
-    }
+	{
+    	agent = GetComponent<NavMeshAgent>();
+
+    	if (player == null)
+    	{
+        	player = GameObject.FindGameObjectWithTag("Player").transform;
+    	}
+	}
 
     void Update()
-    {
-        if (player == null) return;
+	{
+    	if (player == null || agent == null || !agent.enabled)
+        	return;
 
-        float distance = Vector3.Distance(transform.position, player.position);
+    	float distance = Vector3.Distance(transform.position, player.position);
 
-        if (distance <= detectionRange)
-        {
-            agent.SetDestination(player.position);
-        }
-        else
-        {
-            agent.ResetPath(); // se queda quieto si estás lejos
-        }
-    }
+    	if (distance <= detectionRange)
+    	{
+        	agent.SetDestination(player.position);
+    	}
+    	else
+    	{
+        	agent.ResetPath();
+    	}
+	}
 
     void OnCollisionStay(Collision collision)
     {

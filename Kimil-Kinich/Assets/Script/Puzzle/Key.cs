@@ -13,6 +13,8 @@ public class Key : MonoBehaviour
             KeyManager.instancia.ObtenerLlave();
 
             Destroy(gameObject);
+
+            FindObjectOfType<EnemySpawner>().playerHasKey = true;
         }
     }
 }
