@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7716853498806505654}
   - component: {fileID: -7111560363981760887}
   - component: {fileID: 8761300509462537765}
+  - component: {fileID: 373391637955478485}
   m_Layer: 10
   m_Name: Enemy_Projectile
   m_TagString: Bullet_Enemy
@@ -177,3 +178,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!114 &373391637955478485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059923091707726635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptMachine
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: a4ee8d6a7add14d49a612b04fbfa6e0d, type: 2}
