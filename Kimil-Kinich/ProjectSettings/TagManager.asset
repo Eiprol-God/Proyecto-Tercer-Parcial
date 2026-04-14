@@ -12,6 +12,7 @@ TagManager:
   - CoinTen
   - CoinFive
   - CoinTwenty
+  - Shop
   layers:
   - Default
   - TransparentFX
