@@ -9,6 +9,9 @@ TagManager:
   - Bullet_Enemy
   - Wall
   - SpeedPower
+  - CoinTen
+  - CoinFive
+  - CoinTwenty
   layers:
   - Default
   - TransparentFX
