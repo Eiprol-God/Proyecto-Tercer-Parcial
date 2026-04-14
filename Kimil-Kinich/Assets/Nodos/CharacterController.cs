@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class ThirdPersonMovement : MonoBehaviour
@@ -17,7 +18,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Start()
     {
-        controller = GetComponent<CharacterController>();   
+        controller = GetComponent<CharacterController>();
     }
 
     void Update()
@@ -31,31 +32,48 @@ public class ThirdPersonMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        Vector3 direction=new Vector3(horizontal, 0f, vertical);
+        Vector3 direction = new Vector3(horizontal, 0f, vertical);
 
         animator.SetFloat("Speed", direction.magnitude);
 
         if (direction.magnitude >= 0.1f)
         {
-            float targetAngle=Mathf.Atan2(direction.x, direction.z)* Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref rotationSpeed, 0.1f);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-            Vector3 moveDir=Quaternion.Euler(0f,targetAngle, 0f)*Vector3.forward;
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
 
         velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity*Time.deltaTime);   
+        controller.Move(velocity * Time.deltaTime);
 
-        if(Input.GetButtonDown("Jump")&& controller.isGrounded)
+        if (Input.GetButtonDown("Jump") && controller.isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             animator.SetBool("IsJumping", true);
         }
-        else if(controller.isGrounded)
-        { animator.SetBool("IsJumping", false);
+        else if (controller.isGrounded)
+        {
+            animator.SetBool("IsJumping", false);
         }
 
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("SpeedPower"))
+        {
+            speed = speed * 2;
+            Destroy(other.gameObject);
+            StartCoroutine(StopSpeedUp());
+        }
+    }
+
+    private IEnumerator StopSpeedUp()
+    {
+        yield return new WaitForSeconds(5f);
+        speed = speed / 2;
+    }
 }
+

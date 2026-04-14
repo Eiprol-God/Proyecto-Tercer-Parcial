@@ -8,6 +8,7 @@ TagManager:
   - Bullet_Player
   - Bullet_Enemy
   - Wall
+  - SpeedPower
   layers:
   - Default
   - TransparentFX
