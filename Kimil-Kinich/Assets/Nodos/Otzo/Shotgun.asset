@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: Shotgun
+  m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptGraphAsset
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":24.51789,"y":-4.972205},"zoom":0.8,"elements":[{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-470.0,"y":-134.0},"guid":"378b5cf0-09e7-4af0-8ac9-e841da0caad1","$version":"A","$type":"Unity.VisualScripting.OnTriggerEnter","$id":"9"},{"member":{"name":"tag","parameterTypes":null,"targetType":"UnityEngine.Component","targetTypeName":"UnityEngine.Component","$version":"A"},"defaultValues":{"target":null},"position":{"x":-155.0,"y":-43.0},"guid":"5a0877b8-c4e0-48ce-adf5-92351b57ef93","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"11"},{"ignoreCase":false,"options":["Player"],"defaultValues":{},"position":{"x":-12.0,"y":-179.0},"guid":"0620a1f9-bd21-4282-972c-b9f36d0885fe","$version":"A","$type":"Unity.VisualScripting.SwitchOnString","$id":"14"},{"chainable":false,"parameterNames":["value"],"member":{"name":"SetActive","parameterTypes":["System.Boolean"],"targetType":"UnityEngine.GameObject","targetTypeName":"UnityEngine.GameObject","$version":"A"},"defaultValues":{"target":null,"%value":{"$content":true,"$type":"System.Boolean"}},"position":{"x":356.0,"y":-180.0},"guid":"e4e2d0e4-a7d6-4494-a617-188741e52d87","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"17"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"Gun","$type":"System.String"},"object":null},"position":{"x":209.0,"y":76.0},"guid":"68abe9e6-e0bf-4882-abb9-7a4eefdc15ea","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"21"},{"sourceUnit":{"$ref":"9"},"sourceKey":"trigger","destinationUnit":{"$ref":"14"},"destinationKey":"enter","guid":"5204ec28-c8a0-444a-9f9c-2c031ac5d005","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"14"},"sourceKey":"%Player","destinationUnit":{"$ref":"17"},"destinationKey":"enter","guid":"6d3856e8-4d42-457a-83a2-9aa609700f5c","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"9"},"sourceKey":"collider","destinationUnit":{"$ref":"11"},"destinationKey":"target","guid":"06ac0755-f3d5-4036-bd77-1e6358b0be14","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"11"},"sourceKey":"value","destinationUnit":{"$ref":"14"},"destinationKey":"selector","guid":"8bda1dc5-5b3d-410e-87e8-84ba1fdf77d7","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"21"},"sourceKey":"value","destinationUnit":{"$ref":"17"},"destinationKey":"target","guid":"7bc2109a-6dd0-462f-bafb-bc85618723a0","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}'
+    _objectReferences: []
