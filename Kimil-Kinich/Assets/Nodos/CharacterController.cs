@@ -65,8 +65,14 @@ public class ThirdPersonMovement : MonoBehaviour
         if (other.gameObject.CompareTag("SpeedPower"))
         {
             speed = speed * 2;
-            Destroy(other.gameObject);
             StartCoroutine(StopSpeedUp());
+        }
+
+        if (other.gameObject.CompareTag("SpeedPower3"))
+        {
+            speed = speed * 3;
+            
+            StartCoroutine(StopSpeedUp2());
         }
     }
 
@@ -75,5 +81,13 @@ public class ThirdPersonMovement : MonoBehaviour
         yield return new WaitForSeconds(5f);
         speed = speed / 2;
     }
+
+    private IEnumerator StopSpeedUp2()
+    {
+        yield return new WaitForSeconds(5f);
+        speed = speed / 2;
+    }
 }
+
+
 

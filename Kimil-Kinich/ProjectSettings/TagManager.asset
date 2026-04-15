@@ -13,6 +13,9 @@ TagManager:
   - CoinFive
   - CoinTwenty
   - Shop
+  - SpeedPower3
+  - GunTemporal
+  - InmunityOne
   layers:
   - Default
   - TransparentFX
@@ -25,7 +28,7 @@ TagManager:
   - WhatIsPlayer
   - Bullet
   - BulletEnemy
-  - 
+  - Shieldd
   - 
   - 
   - 
