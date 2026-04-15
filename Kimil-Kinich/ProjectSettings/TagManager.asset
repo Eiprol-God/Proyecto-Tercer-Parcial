@@ -16,6 +16,8 @@ TagManager:
   - SpeedPower3
   - GunTemporal
   - InmunityOne
+  - Shield
+  - InmunityTwo
   layers:
   - Default
   - TransparentFX
