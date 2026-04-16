@@ -11,18 +11,24 @@ using UnityEngine.UIElements.Experimental;
 public class Save : MonoBehaviour
 {
 
-   public  static int banco = 0;
+     public int banco;
     [SerializeField] TextMeshProUGUI Bank;
 
-   
+
+    void OnEnable()
+    {
+        banco = PlayerPrefs.GetInt("Banko");
+        
+    }
+
     public void Update()
     {
-        int banco = Variables.Scene(SceneManager.GetActiveScene()).Get<int>("Money");
+        banco = Variables.Scene(SceneManager.GetActiveScene()).Get<int>("Money");
         
 
         Bank.text = "Money:" + banco.ToString();
-        
 
+        
 
     }
     
@@ -30,12 +36,13 @@ public class Save : MonoBehaviour
     public void SaveScore()
     {
         Debug.Log(banco);
-        PlayerPrefs.SetInt("Money", banco);
+        PlayerPrefs.SetInt("Banko", banco);
+        PlayerPrefs.Save();
     }
 
     public void LoadScore()
     {
-        Debug.Log(banco);
-        banco = PlayerPrefs.GetInt("Money");
+        
+        banco = PlayerPrefs.GetInt("Banko");
     }
 }
