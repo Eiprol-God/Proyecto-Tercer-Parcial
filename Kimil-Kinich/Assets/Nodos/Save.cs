@@ -6,43 +6,49 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements.Experimental;
+using static UnityEngine.Rendering.DebugUI;
 
 
 public class Save : MonoBehaviour
 {
-
-     public int banco;
+    int newbank;
+    public int banco;
     [SerializeField] TextMeshProUGUI Bank;
 
 
-    void OnEnable()
-    {
-        banco = PlayerPrefs.GetInt("Banko");
-        
-    }
+    
 
     public void Update()
     {
-        banco = Variables.Scene(SceneManager.GetActiveScene()).Get<int>("Money");
-        
 
+        // banco = banco + Variables.Scene(SceneManager.GetActiveScene()).Get<int>("Money");
         Bank.text = "Money:" + banco.ToString();
 
-        
 
     }
-    
+
 
     public void SaveScore()
     {
-        Debug.Log(banco);
-        PlayerPrefs.SetInt("Banko", banco);
-        PlayerPrefs.Save();
-    }
+
+           
+            banco = Variables.Scene(SceneManager.GetActiveScene()).Get<int>("Money");
+            Debug.Log(banco);
+            PlayerPrefs.SetInt("Banko", banco);
+            PlayerPrefs.Save();
+        } 
 
     public void LoadScore()
     {
         
         banco = PlayerPrefs.GetInt("Banko");
+        Variables.Scene(SceneManager.GetActiveScene()).Set("Money", banco);
+        Debug.Log(banco);
+    }
+
+    public void DeleteData()
+    {
+        PlayerPrefs.DeleteKey("Input");
+        PlayerPrefs.DeleteAll();
     }
 }
