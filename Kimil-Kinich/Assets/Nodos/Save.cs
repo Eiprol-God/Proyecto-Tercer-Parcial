@@ -11,28 +11,31 @@ using UnityEngine.UIElements.Experimental;
 public class Save : MonoBehaviour
 {
 
-    public int banko = (0);
+   public  static int banco = 0;
     [SerializeField] TextMeshProUGUI Bank;
 
-   public void Awake()
-    {
-        
-    }
+   
     public void Update()
     {
-        int banko = Variables.Scene(SceneManager.GetActiveScene()).Get<int>("Money");
-
-        Bank.text = "Money:" + banko.ToString();
+        int banco = Variables.Scene(SceneManager.GetActiveScene()).Get<int>("Money");
         
+
+        Bank.text = "Money:" + banco.ToString();
+        
+
+
     }
+    
 
     public void SaveScore()
     {
-        PlayerPrefs.SetInt("Money:", banko );
+        Debug.Log(banco);
+        PlayerPrefs.SetInt("Money", banco);
     }
 
     public void LoadScore()
     {
-        banko = PlayerPrefs.GetInt("Money:");
+        Debug.Log(banco);
+        banco = PlayerPrefs.GetInt("Money");
     }
 }
