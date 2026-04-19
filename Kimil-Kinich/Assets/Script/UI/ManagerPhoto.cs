@@ -52,7 +52,7 @@ public class PhotoManager : MonoBehaviour
         }
     }
 
-    void ActualizarUI()
+    public void ActualizarUI()
     {
         textoPiezas.text = piezas + "/" + total;
     }

@@ -52,7 +52,7 @@ public class FlowerManager : MonoBehaviour
         }
     }
 
-    void ActualizarUI()
+    public void ActualizarUI()
     {
         textoPzs.text = flowers + "/" + tflowers;
     }
