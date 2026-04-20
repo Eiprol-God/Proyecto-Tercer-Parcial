@@ -19,6 +19,7 @@ TagManager:
   - Shield
   - InmunityTwo
   - CheckPoint
+  - HealthPower
   layers:
   - Default
   - TransparentFX
