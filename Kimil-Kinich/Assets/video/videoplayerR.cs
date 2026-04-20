@@ -6,7 +6,7 @@ using UnityEngine.Video; // Required for the VideoPlayer class
 public class VideoEndChecker : MonoBehaviour
 {
     private VideoPlayer videoPlayer;
-    public GameObject videoPlanel;
+    public GameObject videoPanel;
     public AudioSource audioSource;
 
     void Start()
@@ -20,7 +20,7 @@ public class VideoEndChecker : MonoBehaviour
     // This method will be called when the video finishes
     void OnVideoEnd(VideoPlayer vp)
     {
-        videoPlanel.SetActive(false);
+        videoPanel.SetActive(false);
         audioSource.Play();
         Time.timeScale = 1;
     }
