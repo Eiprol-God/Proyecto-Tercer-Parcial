@@ -2027,6 +2027,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 515307965}
+    - target: {fileID: 5691800476645147836, guid: 71e5aa54108cfdf4790e3253663bc1d1, type: 3}
+      propertyPath: timeRemaining
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 6923536250025253570, guid: 71e5aa54108cfdf4790e3253663bc1d1, type: 3}
       propertyPath: m_Pivot.x
       value: 0
