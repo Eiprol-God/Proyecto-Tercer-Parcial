@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 34c730fc7d3dde942b69bcf2c09948ab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - sonidoRecoger: {fileID: 8300000, guid: 82bc55204b8284f4cb1c6a2d65dae68e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

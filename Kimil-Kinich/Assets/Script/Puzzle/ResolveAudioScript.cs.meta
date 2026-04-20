@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 5499ad5580b0b0741a3299e87d6deb4d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - sonidoPuzzleResuelto: {fileID: 8300000, guid: 7e286f9bc0627b948bd9f2fab786aa42, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
