@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 498608621}
   - component: {fileID: 498608623}
   - component: {fileID: 498608622}
+  - component: {fileID: 498608624}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -293,6 +294,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498608620}
   m_CullTransparentMesh: 1
+--- !u!328 &498608624
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498608620}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 7cc5961d021216943bd0e5542b35014b, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &914055949
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +435,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757298219}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 6c233071a41f6ca44a08096f5d466083, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 7cc5961d021216943bd0e5542b35014b, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -436,7 +473,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 46.39198, y: -0, z: 4.53849}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.8007, y: 4.8007, z: 4.8007}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
