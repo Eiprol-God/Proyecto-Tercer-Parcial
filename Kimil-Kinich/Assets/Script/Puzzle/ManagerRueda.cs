@@ -6,6 +6,7 @@ public class CandadoManager : MonoBehaviour
     public List<RuedaCandado> ruedas;
 
     public GameObject MNGRueda;
+    public GameObject Puerta;
 
     public void VerificarCodigo()
     {
@@ -13,13 +14,13 @@ public class CandadoManager : MonoBehaviour
         {
             if (rueda.valorActual != rueda.valorCorrecto)
             {
-                Debug.Log("Código incorrecto ❌");
                 return;
             }
         }
 
-        Debug.Log("Candado abierto 🔓");
         MNGRueda.SetActive(false);
         AudioManager.instancia.ReproducirPuzzleResuelto();
+
+        Puerta.SetActive(false);
     }
 }

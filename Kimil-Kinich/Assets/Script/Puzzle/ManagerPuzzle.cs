@@ -11,6 +11,9 @@ public class PuzzleManager : MonoBehaviour
 
     public GameObject SlidePuzzle;
 
+    public GameObject camaraPlayer;
+    public GameObject camaraPuzzle;
+
     void Start()
     {
         foreach (Tile tile in tiles)
@@ -41,9 +44,16 @@ public class PuzzleManager : MonoBehaviour
 
             if (EstaResuelto())
             {
-                Debug.Log("GANASTE 😎");
                 SlidePuzzle.SetActive(false);
+
+                if (camaraPuzzle != null)
+                    camaraPuzzle.SetActive(false);
+
+                if (camaraPlayer != null)
+                    camaraPlayer.SetActive(true);
+
                 AudioManager.instancia.ReproducirPuzzleResuelto();
+
             }
         }
     }

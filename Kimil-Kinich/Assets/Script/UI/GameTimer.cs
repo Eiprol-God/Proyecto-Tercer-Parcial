@@ -5,6 +5,7 @@ public class GameTimer : MonoBehaviour
 {
     public float timeRemaining = 60f;
     public bool isRunning = true;
+    private bool yaMurio = false;
 
     public PlayerHealth playerHealth;
 
@@ -31,7 +32,7 @@ public class GameTimer : MonoBehaviour
             timeRemaining = 0;
             isRunning = false;
 
-            playerHealth.TakeDamage(999);
+            playerHealth.Die();
         }
 
         UpdateTimerUI();

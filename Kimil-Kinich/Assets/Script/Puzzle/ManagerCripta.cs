@@ -4,6 +4,7 @@ using UnityEngine;
 public class CriptaManager : MonoBehaviour
 {
     public List<int> ordenCorrecto = new List<int> { 2, 0, 3, 1 };
+    public GameObject Puertita;
 
     private int progreso = 0;
 
@@ -11,20 +12,17 @@ public class CriptaManager : MonoBehaviour
     {
         if (cripta.id == ordenCorrecto[progreso])
         {
-            Debug.Log("Correcto 👍");
 
             progreso++;
 
             if (progreso >= ordenCorrecto.Count)
             {
-                Debug.Log("Puzzle completado 🎉");
+                Puertita.SetActive(false);
                 AudioManager.instancia.ReproducirPuzzleResuelto();
-                // Aquí puedes abrir puerta o lo que quieras
             }
         }
         else
         {
-            Debug.Log("Incorrecto ❌");
             Reiniciar();
         }
     }
